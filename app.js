@@ -1,41 +1,32 @@
-//TM stands for Ticket Master
-
-var TMKey = "zwO23aREsZiPbHU2oJ7D4IhWyAH6YpEG";
-
-//Google API key
-var GPKey = "AIzaSyBVunudFIdMJK1A1g5tBQEMjMPPkmkZw7I";
+//API Keys for Spoontacular and OMDb 
+var spoonKey = "6ad98c8c55ae4c2c9233218dc232d4ca";
+var movieKey = "4ae54f61";
 
 
-var TMUrl = "https://app.ticketmaster.com/discovery/v2/";
+var searchRecipeTitle = function(userRecipe){
+    //call out to Spooncular to request title using user input
+    let recipeString = "https://api.spoonacular.com/recipes/complexSearch?query=" + userRecipe + "&apiKey=" + spoonKey;
+    
+    //removes all previous search results
+    $("#displayRecipes").children().remove();
 
-
-var eventSearchByZip = function (zip) {
-    //calls to ticket master API to get all events upcoming for this zip code
-    fetch(TMUrl + "events.json?postalCode=" + zip + "&apikey=" + TMKey)
-        //after returning a promise, we are processing that response and transforming to JSON data
+    fetch(recipeString)
         .then(Response => Response.json()).then((data) => {
-            //eliminates unneccassary data from our collection
-            data = data._embedded.events;
-            for (let event in data) {
-                //loops through ever object in the returned event array to log data
-                console.log(data[event]);
-            }
-        }).catch((err) => {
-            console.log(err);
-        });
-};
+            //narrows down data to just bring back the results
+            data = data.results;
 
-//Alternatively, we can search by city instead as events are harder to find vs food
-
-var eventSearchByCity = function (city) {
-    fetch(TMUrl + "events.json?city=" + city + "&apikey=" + TMKey)
-        //after returning a promise, we are processing that response and transforming to JSON data
-        .then(Response => Response.json()).then((data) => {
-            //eliminates unneccassary data from our collection
-            data = data._embedded.events;
-            for (let event in data) {
-                //loops through ever object in the returned event array to log data
-                console.log(data[event]);
+            //should the results be an Array, this loops through all items and appends to UL
+            if (Array.isArray(data)){
+                for (let recipe in data){
+                    let recipeTitle = document.createElement("li");
+                    recipeTitle.innerText = data[recipe].title;
+                    $("#displayRecipes").append(recipeTitle);
+                }
+            } else {
+                //if only one result, still appends with no loop
+                let recipeTitle = document.createElement("li");
+                recipeTitle.innerText = data.title;
+                $("#displayMovies").append(recipeTitle);
             }
         }).catch((err) => {
             console.log(err);
@@ -43,11 +34,41 @@ var eventSearchByCity = function (city) {
 };
 
 
+var searchMovieTitle = function(userTitle){
+    //removes previous search history
+    $("#displayMovies").children().remove();
+    let movieString = "http://www.omdbapi.com/?s=" + userTitle + "&apikey=" + movieKey;
+        fetch(movieString)
+            .then(Response => Response.json()).then((data) => {
+                //narrows down data to just provide relevant search data
+                data = data.Search;
 
-//search by zip by passing zip code through 
-//eventSearchByZip("28262");
+                //should results return an array, loops through array and appends title to UL
+                if (Array.isArray(data)){
+                    for (let movie in data){
+                        let title = document.createElement("li");
+                        title.innerText = data[movie].Title;
+                        $("#displayMovies").append(title);
+                    }
+                } else {
+                    let title = document.createElement("li");
+                    title.innerText = data.Title;
+                    $("#displayMovies").append(title);
+                }
+            }).catch((err) => {
+                console.log(err);
+            });
+    };
+    
 
-//search by city by passing city name
-//eventSearchByCity("Charlotte");
+//adding event listeners to trigger search functions
 
+$("#searchMovieTitle").on("click", () => {
+    let title = $("#movieTitle").val();
+    searchMovieTitle(title);
+})
 
+$("#searchRecipes").on("click", () => {
+    let title = $("#recipeTitle").val();
+    searchRecipeTitle(title);
+})
