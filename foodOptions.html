@@ -5,45 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Options</title>
-    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="./Assets/css/foundation.css" />
+    <link rel="stylesheet" href="./Assets/css/app.css" />
 </head>
 <body>
-    <Main>
-        <div class="text-center">
-            <h3> What kind of food would you like to eat tonight?</h3>
+  
+  <Main class="grid-container">
+    <!-- Question  -->
+    <div class="grid-x grid-y grid-padding-x grid-padding-y text-center">
+      <div class="cell">
+        <h2> What kind of food would you like to eat tonight?</h3>
+      </div>
+    </div>
+      <!-- Choices Grid  -->
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12 medium-6 large-4">
+        <div class="card align-center">
+          <img src="assets/imgs/placeholder.png">
+          <div class="card-divider align-center">
+            <h3>American</h3>
+          </div>
         </div>
-        <div class="row">
-            <div class="card" style="width: 300px;">
-                <img src="assets/imgs/placeholder.png">
-                <div class="card-divider">
-                  This is a header
-                </div>
-              </div>
+      </div>
 
-              <div class="card" style="width: 300px;">
-                <div class="card-divider">
-                  This is a header
-                </div>
-                <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <h4>This is a card.</h4>
-                  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                </div>
-              </div>
-
-              <div class="card" style="width: 300px;">
-                <div class="card-divider">
-                  This is a header
-                </div>
-                <img src="assets/img/generic/rectangle-1.jpg">
-                <div class="card-section">
-                  <h4>This is a card.</h4>
-                  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                </div>
-              </div>
-           
+      <div class="cell small-12 medium-6 large-4">
+        <div class="card align-center">
+          <img src="assets/imgs/placeholder.png">
+          <div class="card-divider align-center">
+            <h3>Mexican</h3>
+          </div>
         </div>
-    </Main>
+      </div>
+
+      <div class="cell small-12 medium-6 large-4">
+        <div class="card align-center">
+          <img src="assets/imgs/placeholder.png">
+          <div class="card-divider align-center">
+            <h3>Asian</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell small-12 medium-6 large-4">
+        <div class="card align-center">
+          <img src="assets/imgs/placeholder.png">
+          <div class="card-divider align-center">
+            <h3>Italian</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="cell small-12 medium-6 large-4">
+        <div class="card align-center">
+          <img src="assets/imgs/placeholder.png">
+          <div class="card-divider align-center">
+            <h3>Mediterranean</h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cell small-12 medium-6 large-4">
+        <div class="card align-center">
+          <img src="assets/imgs/placeholder.png">
+          <div class="card-divider align-center">
+            <h3>Indian</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Submit Button  -->
+    <div class="grid-x grid-margin-x align-center">
+        <button class="submit alert button">Submit</button>
+    </div>
+  </Main>
 
 </body>
+
 </html>
