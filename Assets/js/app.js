@@ -7,10 +7,10 @@ $("#searchRecipes").on("click", () => {
     searchRecipes(userCuisine);
 })
 
-$("#searchGenre").on("click", () => {
-    let userGenre = $("#pickGenre").val();
-    searchGenre(userGenre);
-})
+// $("#searchGenre").on("click", () => {
+//     let userGenre = $("#pickGenre").val();
+//     searchGenre(userGenre);
+// })
 
 $("#getMovie").on("click", () => {
     displayMovie(580489);
