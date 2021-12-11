@@ -39,7 +39,7 @@ var displayRecipe = function(recipeID){
 };
 
 $(".option").on("click", function(){
-    let myValue = $(this).val();
-    searchRecipes(myValue);
-    console.log(myValue);
+    let userCuisine = $(this).val();
+
+    sessionStorage.setItem("Cuisine", userCuisine);
 });
