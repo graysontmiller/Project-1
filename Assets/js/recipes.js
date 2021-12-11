@@ -42,3 +42,7 @@ var displayRecipe = function(recipeID){
     });
 };
 
+$(".button").on("click", function(){
+    let myValue = $(this).val();
+    console.log(myValue);
+});
