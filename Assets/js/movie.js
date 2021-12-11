@@ -57,7 +57,7 @@ $(".option").on("click", function(){
 
     for (let genre in movieGenres) {
         if (movieGenres[genre].name == userGenre) {
-            sessionStorage.setItem("Genre ID", movieGenres[genre].id);
+            sessionStorage.setItem("GenreID", movieGenres[genre].id);
         }
     }
 });

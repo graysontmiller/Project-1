@@ -33,6 +33,7 @@
     <script src="./Assets/js/main-page.js"></script>
     <script>
       $(document).foundation();
-      searchGenre("Action");
+      let genre = sessionStorage.getItem("GenreID");
+      searchGenre(genre);
   </script>
 </body>
