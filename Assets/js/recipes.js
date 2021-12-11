@@ -38,7 +38,7 @@ var displayRecipe = function(recipeID){
     });
 };
 
-$(".button").on("click", function(){
+$(".option").on("click", function(){
     let myValue = $(this).val();
     searchRecipes(myValue);
     console.log(myValue);

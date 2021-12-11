@@ -54,7 +54,7 @@ var displayMovie = function(movieID){
     });
 }
 
-$(".button").on("click", function(){
+$(".option").on("click", function(){
     let myValue = $(this).val();
     searchGenre(myValue);
 });
