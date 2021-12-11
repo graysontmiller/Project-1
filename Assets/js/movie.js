@@ -24,11 +24,8 @@ var searchGenre = function (userGenre) {
     fetch(movieString)
         .then(Response => Response.json()).then((data) => {
             data = data.results;
-            console.log(data);
             let movieList = [];
 
-            //loops through the first 6 movies to display titles
-            //note that it assign each movie a value. this is the movie ID
             for (i = 0; i <= 5; i++) {
                 console.log(data[i]);
             }
@@ -58,5 +55,4 @@ $(".option").on("click", function(){
             sessionStorage.setItem("Genre ID", movieGenres[genre].id);
         }
     }
-    //searchGenre(myValue);
 });
