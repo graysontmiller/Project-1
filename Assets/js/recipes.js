@@ -5,9 +5,6 @@ var searchRecipes = function (userCuisine) {
     //call out to Spooncular to request cuisine using user input
     let recipeString = "https://api.spoonacular.com/recipes/complexSearch?cuisine=" + userCuisine + "&apiKey=" + spoonKey;
 
-    //removes all previous search results
-    $("#displayRecipes").children().remove();
-
     fetch(recipeString)
         .then(Response => Response.json()).then((data) => {
             //narrows down data to just bring back the results
@@ -16,6 +13,12 @@ var searchRecipes = function (userCuisine) {
             //should the results be an Array, this loops through all items and appends to UL
             if (Array.isArray(data)) {
                 for (let recipe in data) {
+                    var movieSelectButton = document.createElement("button");
+                    movieSelectButton.classList.add("button");
+                    movieSelectButton.innerText = data[recipe].title;
+                    movieSelectButton.setAttribute("value", data[recipe].id);
+                    $("#displayRecipes").append(movieSelectButton);
+
                     console.log(data[recipe]);
                 }
             } else {
@@ -38,8 +41,10 @@ var displayRecipe = function(recipeID){
     });
 };
 
+// On clicking submit button w/ the class of .option, sets local storage to the cuisine ID of the cuisine on button. 
 $(".option").on("click", function(){
-    let userCuisine = $(this).val();
-
-    sessionStorage.setItem("Cuisine", userCuisine);
+    let myValue = $(this).val();
+    sessionStorage.setItem("Cuisine", myValue);
 });
+
+
