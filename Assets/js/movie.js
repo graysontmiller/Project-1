@@ -2,11 +2,18 @@
 var movieKey = "d4a209b34d618c9571d82786a8f1c751";
 var movieGenres;
 
+
+$(".button").on("click", function(){
+    let myValue = $(this).val();
+    console.log(myValue);
+});
+
 //generators an array of movie genres to later sort through 
 let generateGenreString = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + movieKey + "&language=en-US";
 fetch(generateGenreString)
     .then(Response => Response.json()).then((data) => {
         movieGenres = data.genres;
+        console.log(movieGenres);
     }).catch((err) => {
         console.log(err);
     });
