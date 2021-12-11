@@ -1,4 +1,4 @@
-$(document).foundation()
+$(document).foundation();
 
 //adding event listeners to trigger search functions
 
