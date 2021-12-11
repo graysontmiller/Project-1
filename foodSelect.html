@@ -14,10 +14,8 @@
         <div>
             <h1>Dinner Options Tonight?</h1>
         </div>
-        <div>
-            <ul id="displayRecipes">
-
-            </ul>
+        <div id="displayRecipes">
+            
         </div>
     </div>
 
@@ -27,11 +25,13 @@
     <script src="./assets/js/vendor/jquery.js"></script>
     <script src="./assets/js/vendor/what-input.js"></script>
     <script src="./assets/js/vendor/foundation.min.js"></script>
-    <script src="./Assets/js/movie.js"></script>
+    
     <script src="./Assets/js/recipes.js"></script>
     <script src="./Assets/js/app.js"></script>
     <script src="./Assets/js/main-page.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
+        <script>
+            $(document).foundation();
+            let cuisine = sessionStorage.getItem("Cuisine");
+            searchRecipes(cuisine);
+        </script>
 </body>
