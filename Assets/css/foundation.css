@@ -3351,7 +3351,7 @@ select {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-bottom: 1rem;
-  border: 1px solid #e6e6e6;
+  border: 0px solid #e6e6e6;
   border-radius: 0;
   background: #fefefe;
   -webkit-box-shadow: none;
@@ -3371,7 +3371,7 @@ select {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   padding: 1rem;
-  background: #e6e6e6; }
+  background: #e6e6e600; }
   .card-divider > :last-child {
     margin-bottom: 0; }
 
