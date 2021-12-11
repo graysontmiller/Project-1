@@ -12,6 +12,7 @@ var searchRecipes = function (userCuisine) {
         .then(Response => Response.json()).then((data) => {
             //narrows down data to just bring back the results
             data = data.results;
+            console.log("here!");
 
             //should the results be an Array, this loops through all items and appends to UL
             if (Array.isArray(data)) {

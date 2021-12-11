@@ -27,6 +27,11 @@ var searchGenre = function (userGenre) {
             let movieList = [];
 
             for (i = 0; i <= 5; i++) {
+                var titleButton = document.createElement("button");
+                titleButton.classList.add("button");
+                titleButton.innerText = data[i].title;
+                titleButton.setAttribute("value", data[i].id);
+                $(".movie-options").append(titleButton);
                 console.log(data[i]);
             }
             return movieList;
