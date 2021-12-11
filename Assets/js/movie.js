@@ -3,11 +3,6 @@ var movieKey = "d4a209b34d618c9571d82786a8f1c751";
 var movieGenres;
 
 
-$(".button").on("click", function(){
-    let myValue = $(this).val();
-    console.log(myValue);
-});
-
 //generators an array of movie genres to later sort through 
 let generateGenreString = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + movieKey + "&language=en-US";
 fetch(generateGenreString)
@@ -41,11 +36,7 @@ var searchGenre = function (userGenre) {
             //loops through the first 6 movies to display titles
             //note that it assign each movie a value. this is the movie ID
             for (i = 0; i <= 5; i++) {
-                let movieTitle = document.createElement("li");
-                movieTitle.innerText = data[i].title;
-                movieTitle.setAttribute("value", data[i].id);
-                $("#displayMovies").append(movieTitle);
-                movieList.push(data[i].title);
+                console.log(data[i]);
             }
             return movieList;
         }).catch((err) => {
@@ -62,3 +53,8 @@ var displayMovie = function(movieID){
         console.log(err);
     });
 }
+
+$(".button").on("click", function(){
+    let myValue = $(this).val();
+    searchGenre(myValue);
+});

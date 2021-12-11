@@ -16,15 +16,11 @@ var searchRecipes = function (userCuisine) {
             //should the results be an Array, this loops through all items and appends to UL
             if (Array.isArray(data)) {
                 for (let recipe in data) {
-                    let recipeTitle = document.createElement("li");
-                    recipeTitle.innerText = data[recipe].title;
-                    $("#displayRecipes").append(recipeTitle);
+                    console.log(data[recipe]);
                 }
             } else {
                 //if only one result, still appends with no loop
-                let recipeTitle = document.createElement("li");
-                recipeTitle.innerText = data.title;
-                $("#displayRecipes").append(recipeTitle);
+                console.log(data);
             }
         }).catch((err) => {
             console.log(err);
@@ -44,5 +40,6 @@ var displayRecipe = function(recipeID){
 
 $(".button").on("click", function(){
     let myValue = $(this).val();
+    searchRecipes(myValue);
     console.log(myValue);
 });
