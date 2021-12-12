@@ -16,26 +16,23 @@ fetch(generateGenreString)
 
 var searchGenre = function (userGenre) {
     let movieString = "https://api.themoviedb.org/3/discover/movie?api_key=" + movieKey + "&with_genres=" + userGenre;
-
-    //removes previous search results
-    $("#displayMovies").children().remove();
     
     fetch(movieString)
         .then(Response => Response.json()).then((data) => {
             data = data.results;
 
-            for (i = 0; i < 5; i++) {            
-                let movie = {
-                    "Title": data[i].title,
-                    "Image": "https://image.tmdb.org/t/p/original" + data[i].poster_path,
-                    "ID": data[i].id
-                }
+            for (i = 0; i <= 5; i++) {            
+                // let movie = {
+                //     "Title": data[i].title,
+                //     "Image": "https://image.tmdb.org/t/p/original" + data[i].poster_path,
+                //     "ID": data[i].id
+                // }
 
-                let movieImg = document.getElementById("movie" + i);
+                let movieImg = document.getElementById("image" + i);
                 let movieTitle = document.getElementById("title" + i);
-
-                movieImg.setAttribute("src", data[i].poster_path);
-                movieTitle.innerText = data[i].title;
+                movieImg.setAttribute("value", data[i].id)
+                movieImg.setAttribute("src", "https://image.tmdb.org/t/p/original" + data[i].poster_path);
+                movieTitle.innerHTML = data[i].title;
             }
         }).catch((err) => {
             console.log(err);
@@ -46,7 +43,7 @@ var displayMovie = function(movieID){
     let titleString = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + movieKey;
     fetch(titleString)
     .then(Response => Response.json()).then((data) => {
-        return data;
+        console.log(data);
     }).catch((err) => {
         console.log(err);
     });

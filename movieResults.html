@@ -19,6 +19,10 @@
     <script src="./Assets/js/app.js"></script>
     <script>
       $(document).foundation();
+      $(document).ready(() => {
+        let movieID = sessionStorage.getItem("MovieID");
+        displayMovie(movieID)
+      });
     </script>
 
   </Main>
