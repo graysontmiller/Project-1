@@ -11,7 +11,7 @@ var searchRecipes = function (userCuisine) {
             data = data.results;
             data.length = 6;
 
-            for (let i = 0; i <= 2; i++) {
+            for (let i = 0; i <= 5; i++) {
                 let image = document.getElementById("image" + i);
                 image.setAttribute("src", data[i].image);
                 image.setAttribute("value", data[i].id);
@@ -21,7 +21,6 @@ var searchRecipes = function (userCuisine) {
         });
 };
 
-searchRecipes("American");
 
 var displayRecipe = function(recipeID){
     let recipeString = "https://api.spoonacular.com/recipes/" + recipeID + "/information?apiKey=" + spoonKey;
