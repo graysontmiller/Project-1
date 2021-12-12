@@ -9,34 +9,21 @@ var searchRecipes = function (userCuisine) {
         .then(Response => Response.json()).then((data) => {
             //narrows down data to just bring back the results
             data = data.results;
-            recipesDisplay = [];
+            data.length = 6;
 
-            //should the results be an Array, this loops through all items and appends to UL
-            if (Array.isArray(data)) {
-                for (let recipe in data) {
-                    let myRecipe = {
-                        "Title": data[recipe].title,
-                        "Image": data[recipe].image,
-                        "ID": data[recipe].id
-                    };
-                    recipesDisplay.push(myRecipe);
-                }
-
-                recipesDisplay.length = 5;
-
-                // DO STUFF HERE TO APPEND
-            } else {
-                //if only one result, still appends with no loop
-                console.log(data);
+            for (let i = 0; i <= 2; i++) {
+                let image = document.getElementById("image" + i);
+                image.setAttribute("src", data[i].image);
+                image.setAttribute("value", data[i].id);
             }
         }).catch((err) => {
             console.log(err);
         });
 };
 
+searchRecipes("American");
+
 var displayRecipe = function(recipeID){
-
-
     let recipeString = "https://api.spoonacular.com/recipes/" + recipeID + "/information?apiKey=" + spoonKey;
 
     fetch(recipeString)
@@ -47,10 +34,15 @@ var displayRecipe = function(recipeID){
     });
 };
 
+
 // On clicking submit button w/ the class of .option, sets local storage to the cuisine ID of the cuisine on button. 
 $(".option").on("click", function(){
     let myValue = $(this).val();
     sessionStorage.setItem("Cuisine", myValue);
 });
 
-
+$(".card").on("click", () => {
+    let myValue = this.event.target;
+    myValue = myValue.getAttribute("value");
+    sessionStorage.setItem("recipeID", myValue);
+});
