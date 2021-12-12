@@ -1,5 +1,5 @@
 //API Key for Spoonuclar
-var spoonKey = "6ad98c8c55ae4c2c9233218dc232d4ca";
+var spoonKey = "05efc9acc12b43bfb802a1d2755035db";
 
 var searchRecipes = function (userCuisine) {
     //call out to Spooncular to request cuisine using user input
@@ -13,12 +13,12 @@ var searchRecipes = function (userCuisine) {
             //should the results be an Array, this loops through all items and appends to UL
             if (Array.isArray(data)) {
                 for (let recipe in data) {
+                    let myRecipe = {
+                        "Title": data[recipe].title,
+                        "Image": data[recipe].image
+                    };
                     
-                    movieSelectButton.innerText = data[recipe].title;
-                    movieSelectButton.setAttribute("value", data[recipe].id);
-                    
-
-                    console.log(data[recipe]);
+                    console.log(myRecipe);
                 }
             } else {
                 //if only one result, still appends with no loop
