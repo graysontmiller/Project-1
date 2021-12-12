@@ -27,5 +27,9 @@
     <script src="./Assets/js/app.js"></script>
     <script>
       $(document).foundation();
+      $(document).ready(() => {
+          let recipeID = sessionStorage.getItem("recipeID");
+          displayRecipe(recipeID);
+      });
     </script>
 </body>

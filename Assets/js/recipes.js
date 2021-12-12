@@ -27,7 +27,7 @@ var displayRecipe = function(recipeID){
 
     fetch(recipeString)
     .then(Response => Response.json()).then((data) => {
-        return data;
+        console.log(data);
     }).catch((err) => {
         console.log(err);
     });
