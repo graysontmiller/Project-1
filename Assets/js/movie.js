@@ -23,7 +23,6 @@ var searchGenre = function (userGenre) {
     fetch(movieString)
         .then(Response => Response.json()).then((data) => {
             data = data.results;
-            let movieList = [];
 
             for (i = 0; i < 5; i++) {            
                 let movie = {
@@ -32,9 +31,12 @@ var searchGenre = function (userGenre) {
                     "ID": data[i].id
                 }
 
-                movieList.push(movie);
+                let movieImg = document.getElementById("movie" + i);
+                let movieTitle = document.getElementById("title" + i);
+
+                movieImg.setAttribute("src", data[i].poster_path);
+                movieTitle.innerText = data[i].title;
             }
-            console.log(movieList);
         }).catch((err) => {
             console.log(err);
         });
