@@ -16,6 +16,7 @@ var searchRecipes = function (userCuisine) {
                 for (let recipe in data) {
                     var movieSelectButton = document.createElement("button");
                     movieSelectButton.classList.add("button");
+                    movieSelectButton.classList.add("cell");
                     movieSelectButton.innerText = data[recipe].title;
                     movieSelectButton.setAttribute("value", data[recipe].id);
                     $("#displayRecipes").append(movieSelectButton);
