@@ -9,7 +9,6 @@ let generateGenreString = "https://api.themoviedb.org/3/genre/movie/list?api_key
 fetch(generateGenreString)
     .then(Response => Response.json()).then((data) => {
         movieGenres = data.genres;
-        console.log(movieGenres);
     }).catch((err) => {
         console.log(err);
     });
@@ -26,15 +25,17 @@ var searchGenre = function (userGenre) {
             data = data.results;
             let movieList = [];
 
-            for (i = 0; i <= 5; i++) {
-                var titleButton = document.createElement("button");
-                titleButton.classList.add("button");
-                titleButton.innerText = data[i].title;
-                titleButton.setAttribute("value", data[i].id);
-                $(".movie-options").append(titleButton);
-                console.log(data[i]);
+            for (i = 0; i < 5; i++) {            
+                let movie = {
+                    "Title": data[i].title,
+                    "Image": "https://image.tmdb.org/t/p/original" + data[i].poster_path,
+                    "ID": data[i].id
+                }
+
+                //APPEND STUFF HERE
+                movieList.push(movie);
             }
-            return movieList;
+            console.log(movieList);
         }).catch((err) => {
             console.log(err);
         });
@@ -53,11 +54,15 @@ var displayMovie = function(movieID){
 $(".option").on("click", function(){
     let userGenre = $(this).val();
 
-    console.log(userGenre);
-
     for (let genre in movieGenres) {
         if (movieGenres[genre].name == userGenre) {
             sessionStorage.setItem("GenreID", movieGenres[genre].id);
         }
     }
+});
+
+$(".cell").on("click", () => {
+    let userRecipe = this.event.target;
+
+    console.log(userRecipe);
 });
