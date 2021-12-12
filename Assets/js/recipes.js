@@ -1,5 +1,5 @@
 //API Key for Spoonuclar
-var spoonKey = "05efc9acc12b43bfb802a1d2755035db";
+var spoonKey = "6e157552cb0f4af9b51602e19cc654a3";
 
 var searchRecipes = function (userCuisine) {
     //call out to Spooncular to request cuisine using user input
@@ -11,7 +11,7 @@ var searchRecipes = function (userCuisine) {
             data = data.results;
             data.length = 6;
 
-            for (let i = 0; i <= 2; i++) {
+            for (let i = 0; i <= 5; i++) {
                 let image = document.getElementById("image" + i);
                 image.setAttribute("src", data[i].image);
                 image.setAttribute("value", data[i].id);
@@ -21,7 +21,6 @@ var searchRecipes = function (userCuisine) {
         });
 };
 
-searchRecipes("American");
 
 var displayRecipe = function(recipeID){
     let recipeString = "https://api.spoonacular.com/recipes/" + recipeID + "/information?apiKey=" + spoonKey;
