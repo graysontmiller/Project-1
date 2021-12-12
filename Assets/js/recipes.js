@@ -9,17 +9,22 @@ var searchRecipes = function (userCuisine) {
         .then(Response => Response.json()).then((data) => {
             //narrows down data to just bring back the results
             data = data.results;
+            recipesDisplay = [];
 
             //should the results be an Array, this loops through all items and appends to UL
             if (Array.isArray(data)) {
                 for (let recipe in data) {
                     let myRecipe = {
                         "Title": data[recipe].title,
-                        "Image": data[recipe].image
+                        "Image": data[recipe].image,
+                        "ID": data[recipe].id
                     };
-                    
-                    console.log(myRecipe);
+                    recipesDisplay.push(myRecipe);
                 }
+
+                recipesDisplay.length = 5;
+
+                // DO STUFF HERE TO APPEND
             } else {
                 //if only one result, still appends with no loop
                 console.log(data);
