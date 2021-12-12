@@ -9,16 +9,14 @@ var searchRecipes = function (userCuisine) {
         .then(Response => Response.json()).then((data) => {
             //narrows down data to just bring back the results
             data = data.results;
-            console.log("here!");
 
             //should the results be an Array, this loops through all items and appends to UL
             if (Array.isArray(data)) {
                 for (let recipe in data) {
-                    var movieSelectButton = document.createElement("button");
-                    movieSelectButton.classList.add("button");
+                    
                     movieSelectButton.innerText = data[recipe].title;
                     movieSelectButton.setAttribute("value", data[recipe].id);
-                    $("#displayRecipes").append(movieSelectButton);
+                    
 
                     console.log(data[recipe]);
                 }
@@ -32,6 +30,8 @@ var searchRecipes = function (userCuisine) {
 };
 
 var displayRecipe = function(recipeID){
+
+
     let recipeString = "https://api.spoonacular.com/recipes/" + recipeID + "/information?apiKey=" + spoonKey;
 
     fetch(recipeString)
