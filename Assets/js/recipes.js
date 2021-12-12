@@ -1,5 +1,5 @@
 //API Key for Spoonuclar
-var spoonKey = "05efc9acc12b43bfb802a1d2755035db";
+var spoonKey = "6e157552cb0f4af9b51602e19cc654a3";
 
 var searchRecipes = function (userCuisine) {
     //call out to Spooncular to request cuisine using user input

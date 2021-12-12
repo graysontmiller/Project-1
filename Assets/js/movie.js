@@ -32,7 +32,6 @@ var searchGenre = function (userGenre) {
                     "ID": data[i].id
                 }
 
-                //APPEND STUFF HERE
                 movieList.push(movie);
             }
             console.log(movieList);
@@ -65,8 +64,9 @@ $(".button").on("click", function(){
     let myValue = $(this).val();
     console.log(myValue);
 });
-$(".cell").on("click", () => {
-    let userRecipe = this.event.target;
 
-    console.log(userRecipe);
+$(".card").on("click", () => {
+    let myValue = this.event.target;
+    myValue = myValue.getAttribute("value");
+    sessionStorage.setItem("MovieID", myValue);
 });
