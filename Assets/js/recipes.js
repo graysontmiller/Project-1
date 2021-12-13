@@ -39,7 +39,7 @@ var displayRecipe = function(recipeID){
 
         for(let food in data.extendedIngredients){
             let li = document.createElement("li");
-            li.innerText = data.extendedIngredients[food].name;
+            li.innerHTML = data.extendedIngredients[food].name;
             $(ingredients).append(li);
         }
 
