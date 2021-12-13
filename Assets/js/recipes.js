@@ -28,8 +28,21 @@ var displayRecipe = function(recipeID){
     fetch(recipeString)
     .then(Response => Response.json()).then((data) => {
         console.log(data);
+        let title = document.getElementById("title");
+        let image = document.getElementById("image");
+        let ingredients = document.getElementById("ingredients");
+        let instructions = document.getElementById("instructions");
 
-        
+        title.innerText = data.title;
+        image.setAttribute("src", data.image);
+        instructions.innerText = data.instructions;
+
+        for(let food in data.extendedIngredients){
+            let li = document.createElement("li");
+            li.innerText = data.extendedIngredients[food].name;
+            $(ingredients).append(li);
+        }
+
     }).catch((err) => {
         console.log(err);
     });
