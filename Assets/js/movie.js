@@ -44,6 +44,9 @@ var displayMovie = function(movieID){
     fetch(titleString)
     .then(Response => Response.json()).then((data) => {
         console.log(data);
+        let image = document.getElementById("image");
+        $("#title").text(data.title);
+        image.setAttribute("src", "https://image.tmdb.org/t/p/original" + data.poster_path)
     }).catch((err) => {
         console.log(err);
     });

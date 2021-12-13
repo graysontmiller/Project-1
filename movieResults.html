@@ -18,9 +18,9 @@
 
         <div class=" Large 4">
             <div class="card cell shadow" style="width: 300px;">
-                <img src="assets/imgs/placeholder.png" id="image0">
+                <img src="assets/imgs/placeholder.png" id="image">
                 <div class="card-section">
-                  <h4>This is a card.</h4>
+                  <h4 id="title">This is a card.</h4>
                 </div>
             </div>
         </div> 
@@ -38,7 +38,7 @@
       $(document).foundation();
       $(document).ready(() => {
         let movieID = sessionStorage.getItem("MovieID");
-        displayMovie(movieID)
+        displayMovie(movieID);
       });
     </script>
 
