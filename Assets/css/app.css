@@ -1,4 +1,4 @@
- *{border: 1px solid red;}
+ /*{border: 1px solid red;}*/
 
 @media screen and (max-width: 39.9375em) {
     .spacer-bar {
@@ -25,4 +25,12 @@
 .align-right {
     float: right;
     border-radius:10%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.margin {
+    margin-top: 10px;
 }
