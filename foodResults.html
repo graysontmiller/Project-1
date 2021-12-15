@@ -51,6 +51,10 @@
     <script src="./Assets/js/app.js"></script>
     <script>
       $(document).foundation();
+
+      //when the documents loads (on ready), it retrieves item from session storage
+      //and assigns it to a variable. We then call DisplayRecipe and pass the value
+      //to the function
       $(document).ready(() => {
           let recipeID = sessionStorage.getItem("recipeID");
           displayRecipe(recipeID);
