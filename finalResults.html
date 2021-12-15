@@ -11,29 +11,37 @@
 </head>
 
 <body>
-    <section class="grid-x text-center">
+    <section class="grid-x grid-padding-x grid-padding-y text-center">
         <div class="cell">
             <h1>Here's to a perfect night in</h1>
         </div>
     </section>
+    <!-- results  -->
     <main class="grid-x">
         <!-- Dinner Section  -->
-        <section class="cell large-6">
+        <section class="cell small-6 large-6">
             <div class="grid-container fluid">
+                <!-- Dinner Image and Text cards  -->
                 <div class="grid-x">
                     <div class="cell large-6">
-                        <img src="assets/imgs/placeholder.png" width="300" height="300">
+                        <div class="grid-x">
+                            <div class="card">
+                             <img src="assets/imgs/placeholder.png">
+                            </div>
+                        </div>
                     </div>
                     <div class="cell large-6" >
-                        <div class="card">
-                            <p>Dinner Text Content</p>
+                        <div class="callout">
+                            <h2>Dinner Text Content</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum amet suscipit laudantium iusto dolorem atque maiores! Dolorum, tempora similique possimus doloribus error excepturi perferendis ea id quia exercitationem eos deleniti.</p>
                         </div>
                     </div>
                 </div>
+                <!-- Accordion with Ingredients and Instructions  -->
                 <div class="grid-x">
                     <div class="cell">
-                        <ul class="accordion" data-accordion>
-                            <li class="accordion-item is-active" data-accordion-item>
+                        <ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+                            <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Ingredients</a>
                                 <div class="accordion-content" data-tab-content>
                                     <p>Panel 1. Lorem ipsum dolor</p>
@@ -50,8 +58,40 @@
                 </div>
             </div>
         </section>
-        <section class="cell large-6">
-            <h2>Movie</h2>
+        <!-- Movie section  -->
+        <section class="cell small-6 large-6">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell large-6">
+                        <div class="card">
+                            <img src="https://m.media-amazon.com/images/I/91jatiUZjtL._AC_SY741_.jpg" alt="poster" >
+                        </div>
+                    </div>
+                    <div class="cell large-6">
+                        <div class="grid-x">
+                            <div class="cell">
+                                <div class="callout large">
+                                    <h2>Epic Movie Title</h2>
+                                    <p>Epic Movie Desc</p>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="callout large">
+                                    <h2>Rating</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="cell">
+                        <div class="callout large">
+                            <h2>Movie Synopsis</h2>
+                            <p>This is a movie</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </section>
     </main>
 
