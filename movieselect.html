@@ -91,6 +91,9 @@
   <script src="./Assets/js/main-page.js"></script>
   <script>
     $(document).foundation();
+
+    //assigns item retrieved from session storage and calls 
+    //SearchGenre, passing through our variable
     let genre = sessionStorage.getItem("GenreID");
     searchGenre(genre);
   </script>
