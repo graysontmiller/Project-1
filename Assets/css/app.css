@@ -50,7 +50,7 @@ body {
 .index-title-padding {
     padding-top: 150px;
     padding-left: 100px;
-    font-size: 100px;
+
 }
 
 .index-submit-button {
@@ -85,4 +85,32 @@ body {
 
 .margin {
     margin-top: 10px;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+@media screen and (max-width: 980px) {
+
+/* Styling for all page titles */
+.title-text {
+    font-size: 64;
+    font-weight: bold;
+}
+
+/*Styling for index page elements*/
+.index-title-padding {
+    padding-top: 300px;
+    padding-left: 75px;
+}
+
+.index-submit-button {
+    padding-top: 150px;
+}
+
+.index-title-text {
+    font-size: 70px;
+    font-weight: bold;
+}
+/* End of styling for index page elements */
+
 }
