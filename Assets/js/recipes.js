@@ -11,6 +11,7 @@ var searchRecipes = function (userCuisine) {
         .then(Response => Response.json()).then((data) => {
             //narrows down data to just bring back the results
             data = data.results;
+            
             //we receive several items in array, we only want to show the user 6 items.
             data.length = 6;
 
