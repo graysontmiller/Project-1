@@ -87,9 +87,8 @@ body {
     margin-top: 10px;
 }
 
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-
-@media screen and (max-width: 980px) {
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
 
 /* Styling for all page titles */
 .title-text {
@@ -109,6 +108,33 @@ body {
 
 .index-title-text {
     font-size: 70px;
+    font-weight: bold;
+}
+/* End of styling for index page elements */
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+    /* Styling for all page titles */
+.title-text {
+    font-size: 64;
+    font-weight: bold;
+}
+
+/*Styling for index page elements*/
+.index-title-padding {
+    padding-top: 275px;
+    padding-left: 45px;
+}
+
+.index-submit-button {
+    padding-top: 75px;
+}
+
+.index-title-text {
+    font-size: 46px;
     font-weight: bold;
 }
 /* End of styling for index page elements */
