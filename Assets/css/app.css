@@ -49,6 +49,12 @@ body {
     font-size: 18px;
 }
 
+.button-custom-option {
+    background-color:white;
+    color: #000;
+    border-radius: 15px;
+}
+
 /* Styling for all page titles */
 .title-text {
     font-size: 64;

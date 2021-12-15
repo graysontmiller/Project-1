@@ -5,35 +5,43 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation Starter Template</title>
+    <title>mynightho.me final results</title>
     <link rel="stylesheet" href="./Assets/css/foundation.css" />
     <link rel="stylesheet" href="./Assets/css/app.css" />
 </head>
 
 <body>
-    <section class="grid-x text-center">
+    <section class="grid-x grid-padding-x grid-padding-y text-center">
         <div class="cell">
             <h1>Here's to a perfect night in</h1>
         </div>
     </section>
+    <!-- results  -->
     <main class="grid-x">
         <!-- Dinner Section  -->
-        <section class="cell large-6">
+        <section class="cell small-6 large-6">
             <div class="grid-container fluid">
+                <!-- Dinner Image and Text cards  -->
                 <div class="grid-x">
                     <div class="cell large-6">
-                        <img src="" id="dinnerPicture" width="300" height="300">
+                        <div class="grid-x">
+                            <div class="card">
+                             <img src="" id="dinnerPicture">
+                            </div>
+                        </div>
                     </div>
                     <div class="cell large-6" >
-                        <div class="card">
-                            <p id="dinnerTitle"></p>
+                        <div class="callout">
+                            <h2 id="dinnerTitle"></h2>
+                            <p></p>
                         </div>
                     </div>
                 </div>
+                <!-- Accordion with Ingredients and Instructions  -->
                 <div class="grid-x">
                     <div class="cell">
-                        <ul class="accordion" data-accordion>
-                            <li class="accordion-item is-active" data-accordion-item>
+                        <ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+                            <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Ingredients</a>
                                 <div class="accordion-content" id="ingredient-list" data-tab-content>
                                 </div>
@@ -49,8 +57,41 @@
                 </div>
             </div>
         </section>
-        <section class="cell large-6">
-            <h2>Movie</h2>
+        <!-- Movie section  -->
+        <section class="cell small-6 large-6">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell large-6">
+                        <div class="card">
+                            <img src="" id="movie-poster" alt="poster" >
+                        </div>
+                    </div>
+                    <div class="cell large-6">
+                        <div class="grid-x">
+                            <div class="cell">
+                                <div class="callout large">
+                                    <h2 id="movie-title"></h2>
+                                    <p id="movie-tagline"></p>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="callout large">
+                                    <h2 id="movie-rating"></h2>
+                                    <img src="./Assets/star.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="cell">
+                        <div class="callout large">
+                            <h2>Description: </h2>
+                            <p id="movie-description"></p> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </section>
     </main>
 
@@ -60,7 +101,6 @@
     <script src="./assets/js/vendor/what-input.js"></script>
     <script src="./assets/js/vendor/foundation.min.js"></script>
     <script src="./Assets/js/app.js"></script>
-    <script src="./Assets/js/main-page.js"></script>
     <script>
       $(document).foundation();
 
