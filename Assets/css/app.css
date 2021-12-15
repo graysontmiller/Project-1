@@ -54,6 +54,7 @@ body {
 }
 
 
+
 .button-custom-option {
     background-color:white;
     color: #000;
@@ -167,9 +168,18 @@ body {
 @media screen and (max-width: 575px) {
 
     /* Styling for all page titles */
-.title-text {
-    font-size: 64;
+.padding-title-text {
+    padding-top: 275px;
+    font-size: 48 !important;
     font-weight: bold;
+    text-align: center;
+}
+
+/* Specific styling for title text on the options pages */
+.top-title-text {
+    font-size: 48 !important;
+    font-weight: bold;
+    text-align: center;
 }
 
 /*Styling for index page elements*/
