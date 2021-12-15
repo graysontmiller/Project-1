@@ -1,5 +1,8 @@
 /* * { border: 1px solid red; } */
 
+body {
+    background-color: #eee;
+}
 .full {
     display: table;
     width: 100%;
