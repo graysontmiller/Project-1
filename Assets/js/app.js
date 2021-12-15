@@ -1,6 +1,8 @@
 //loads CSS Foundation Framework
 $(document).foundation();
 
+var spoonKey = "6e157552cb0f4af9b51602e19cc654a3";
+var movieKey = "d4a209b34d618c9571d82786a8f1c751";
 
 var finalResults = function (movieID, recipeID) {
     let movieString = "https://api.themoviedb.org/3/movie/" + movieID + "?api_key=" + movieKey;
@@ -18,19 +20,20 @@ var finalResults = function (movieID, recipeID) {
 
     fetch(recipeString)
     .then(Response => Response.json()).then((data) => {
-        let title = document.getElementById("title");
-        let image = document.getElementById("image");
-        let ingredients = document.getElementById("ingredients");
+        let dinnerTitle = document.getElementById("dinnerTitle");
+        let dinnerPicture = document.getElementById("dinnerPicture");
+        let ingredientList = document.getElementById("ingredient-list");
         let instructions = document.getElementById("instructions");
 
-        title.innerText = data.title;
-        image.setAttribute("src", data.image);
-        instructions.innerText = data.instructions;
+        console.log(data);
+        dinnerTitle.innerText = data.title;
+        dinnerPicture.setAttribute("src", data.image);
+        instructions.innerHTML = data.instructions;
 
         for(let food in data.extendedIngredients){
             let li = document.createElement("li");
-            li.innerHTML = data.extendedIngredients[food].name;
-            $(ingredients).append(li);
+            li.innerText = data.extendedIngredients[food].name;
+            $(ingredientList).append(li);
         }
 
     }).catch((err) => {
