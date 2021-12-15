@@ -1,5 +1,8 @@
 /* * { border: 1px solid red; } */
 
+body{
+    background-color: #eee;
+}
 .full {
     display: table;
     width: 100%;
@@ -37,6 +40,15 @@
     margin-bottom: 10px;
 }
 
+.button-custom {
+    background-color:white; 
+    padding: 25px; 
+    color:black; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+    font-size: 18px;
+}
+
 /* footer {
     margin-top: 0!important;
 } */
@@ -58,4 +70,10 @@
 
 .margin {
     margin-top: 10px;
+}
+
+.scaling-button {
+    height: 127px;
+    width: 127px;
+    font-size: 40px;
 }
