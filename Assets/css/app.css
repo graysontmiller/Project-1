@@ -40,6 +40,15 @@ body {
     margin-bottom: 10px;
 }
 
+.button-custom {
+    background-color:white; 
+    padding: 25px; 
+    color:black; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+    font-size: 18px;
+}
+
 /* Styling for all page titles */
 .title-text {
     font-size: 64;
@@ -139,4 +148,8 @@ body {
 }
 /* End of styling for index page elements */
 
+.scaling-button {
+    height: 127px;
+    width: 127px;
+    font-size: 40px;
 }
