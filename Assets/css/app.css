@@ -1,4 +1,4 @@
-/* * { border: 1px solid red; } */
+/* * { border: 1px solid red; }  */
 
 body {
     background-color: #eee;
@@ -49,6 +49,7 @@ body {
     font-size: 18px;
 }
 
+
 .button-custom-option {
     background-color:white;
     color: #000;
@@ -69,11 +70,17 @@ body {
 }
 
 .index-submit-button {
+    font-size: 28px;
+    width: 464px;
+    height: 84px;    
+}
+
+.index-submit-button-padding {
     padding-top: 200px;
 }
 
 .index-title-text {
-    font-size: 70px;
+    font-size: 96px;
     font-weight: bold;
 }
 /* End of styling for index page elements */
@@ -125,7 +132,13 @@ body {
 }
 
 .index-submit-button {
-    padding-top: 150px;
+    font-size: 28px;
+    width: 464px;
+    height: 84px;    
+}
+
+.index-submit-button-padding {
+    padding-top: 125px;
 }
 
 .index-title-text {
@@ -152,8 +165,14 @@ body {
 }
 
 .index-submit-button {
-    padding-top: 50px;
-    
+    font-size: 20px;
+    width: 308px;
+    height: 56px;  
+    padding-top: 18px;
+}
+.index-submit-button-padding {
+    padding-top: 75px;
+    text-align: center;
 }
 
 .index-title-text {
