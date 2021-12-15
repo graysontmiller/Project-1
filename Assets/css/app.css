@@ -47,6 +47,10 @@ body {
     border-radius: 15px; 
     margin-bottom: 10px; 
     font-size: 18px;
+
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
 }
 
 
@@ -76,7 +80,13 @@ body {
 .index-submit-button {
     font-size: 28px;
     width: 464px;
-    height: 84px;    
+    height: 84px;   
+    background-color:white; 
+    padding: 25px; 
+    color:black; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+    
 }
 
 .index-submit-button-padding {
@@ -173,6 +183,9 @@ body {
     width: 308px;
     height: 56px;  
     padding-top: 18px;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
 }
 .index-submit-button-padding {
     padding-top: 75px;
