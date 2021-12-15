@@ -1,6 +1,10 @@
 /* * { border: 1px solid red; } */
 
+<<<<<<< HEAD
 body{
+=======
+body {
+>>>>>>> 805ca91f5cf352d53f3ff7a78d4ae7044e4427ae
     background-color: #eee;
 }
 .full {
@@ -40,6 +44,7 @@ body{
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .button-custom {
     background-color:white; 
     padding: 25px; 
@@ -49,6 +54,32 @@ body{
     font-size: 18px;
 }
 
+=======
+/* Styling for all page titles */
+.title-text {
+    font-size: 64;
+    font-weight: bold;
+}
+
+/*Styling for index page elements*/
+.index-title-padding {
+    padding-top: 150px;
+    padding-left: 100px;
+    font-size: 100px;
+}
+
+.index-submit-button {
+    padding-top: 200px;
+}
+
+.index-title-text {
+    font-size: 70px;
+    font-weight: bold;
+}
+/* End of styling for index page elements */
+
+
+>>>>>>> 805ca91f5cf352d53f3ff7a78d4ae7044e4427ae
 /* footer {
     margin-top: 0!important;
 } */
