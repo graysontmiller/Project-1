@@ -1,16 +1,40 @@
- /* {border: 1px solid red;} */
+/* * { border: 1px solid red; } */
 
-@media screen and (max-width: 39.9375em) {
-    .spacer-bar {
-        display: none;
-    }
+.full {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    background-size: cover;
 }
 
-@media screen and (min-width: 64em) {
-    body {
-        overflow: auto;
-        background-color: #eee;
-    }
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.full .section-block {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* .section-block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+} */
+
+.button.option {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
+}
+
+.button-group .button {
+    margin-bottom: 10px;
 }
 
 /* footer {
