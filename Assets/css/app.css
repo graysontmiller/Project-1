@@ -62,6 +62,10 @@ body {
     font-weight: bold;
 }
 
+.title-text-padding {
+    padding-top: 50px;
+}
+
 /*Styling for index page elements*/
 .index-title-padding {
     padding-top: 150px;
