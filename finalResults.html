@@ -11,33 +11,33 @@
 </head>
 
 <body>
-        <div class="text-center ">
-            <h1 class="title-text">Here's to a perfect night in</h1>
-        </div>
+    <div class="text-center ">
+        <h1 class="title-text">Here's to a perfect night in</h1>
+    </div>
     <!-- results  -->
-    <main class="grid-x">
+    <main class="grid-x align-center">
         <!-- Dinner Section  -->
-        <section class="cell small-6 large-6">
+        <section class="cell small-10 large-6">
             <div class="grid-container fluid">
                 <!-- Dinner Image and Text cards  -->
-                <div class="grid-x">
-                    <div class="cell large-6">
+                <div class="grid-x align-center">
+                    <div class="cell small-11 large-6">
                         <div class="grid-x">
                             <div class="card">
                              <img src="" id="dinnerPicture">
                             </div>
                         </div>
                     </div>
-                    <div class="cell large-6" >
-                        <div class="callout">
+                    <div class="cell small-11 large-6 flex-container">
+                        <div class="callout flex-child-auto">
                             <h2 id="dinnerTitle"></h2>
-                            <p></p>
+                            <p id="servings"></p>
                         </div>
                     </div>
                 </div>
                 <!-- Accordion with Ingredients and Instructions  -->
-                <div class="grid-x">
-                    <div class="cell">
+                <div class="grid-x align-center">
+                    <div class="cell small-11 large-12">
                         <ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
                             <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Ingredients</a>
@@ -56,36 +56,30 @@
             </div>
         </section>
         <!-- Movie section  -->
-        <section class="cell small-6 large-6">
+        <section class="cell small-10 large-6">
             <div class="grid-container">
-                <div class="grid-x">
-                    <div class="cell large-6">
+                <!-- Poster and Synopsis cards  -->
+                <div class="grid-x align-center">
+                    <!-- Poster -->
+                    <div class="cell small-11 large-6">
                         <div class="card">
                             <img src="" id="movie-poster" alt="poster" >
                         </div>
                     </div>
-                    <div class="cell large-6">
-                        <div class="grid-x">
-                            <div class="cell">
-                                <div class="callout large">
-                                    <h2 id="movie-title"></h2>
-                                    <p id="movie-tagline"></p>
-                                </div>
-                            </div>
-                            <div class="cell">
-                                <div class="callout large">
-                                    <h2 id="movie-rating"></h2>
-                                    <img src="./Assets/imgs/star.svg"/>
-                                </div>
-                            </div>
+                    <!-- Synopsis  -->
+                    <div class="cell small-11 small-order-2 large-6 large-order-1 flex-container">
+                         <div class="callout large flex-child-auto">
+                            <h2>Movie Synopsis: </h2>
+                            <p id="movie-description"></p> 
                         </div>
                     </div>
-                </div>
-                <div class="grid-x">
-                    <div class="cell">
+                    <div class="cell small-11 small-order-1 large-12 large-order-2">
                         <div class="callout large">
-                            <h2>Description: </h2>
-                            <p id="movie-description"></p> 
+                            <h2 id="movie-title"></h2>
+                            <p id="genre"></p>
+                            <p id="movie-tagline"></p>
+                            <h3 id="movie-rating"></h3>
+                            <img src="./Assets/imgs/star.svg"/>
                         </div>
                     </div>
                 </div>
