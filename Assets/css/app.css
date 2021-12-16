@@ -30,46 +30,21 @@ body {
     padding-bottom: 100px;
 } */
 
-.button.option {
-    display: block;
-    margin: 0 auto 1rem auto;
-    width: 10em;
-}
-
-.button-group .button {
-    margin-bottom: 10px;
-}
-
-.button-custom {
-    background-color:white; 
-    padding: 25px; 
-    color:black; 
-    border-radius: 15px; 
-    margin-bottom: 10px; 
-    font-size: 18px;
-
-    display: block;
-    margin: 0 auto 1rem auto;
-    width: 10em;
-}
-
-
-
-.button-custom-option {
-    background-color:white;
-    color: #000;
-    border-radius: 15px;
-}
 
 /* Styling for all page titles */
 .title-text {
     font-size: 64;
     font-weight: bold;
-}
-
-.title-text-padding {
     padding-top: 50px;
 }
+
+
+.padding-title-text {
+    padding-top: 275px;
+    font-size: 64;
+    font-weight: bold;
+    text-align: center;
+} 
 
 /*Styling for index page elements*/
 .index-title-padding {
@@ -114,6 +89,42 @@ body {
     height: 127px;
     width: 127px;
     font-size: 40px;
+}
+
+.button.option {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
+}
+
+.button-group .button {
+    margin-bottom: 10px;
+}
+
+.button-custom {
+    background-color:white; 
+    padding: 25px; 
+    color:black; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+    font-size: 18px;
+
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
+}
+
+
+
+.button-custom-option {
+    background-color:white;
+    color: #000;
+    border-radius: 15px;
+}
+
+.options-card {
+    font-size: 20px !important;
+    font-weight: bold;
 }
 
 /* End button styling */
@@ -176,7 +187,7 @@ body {
 }
 
 /* Specific styling for title text on the options pages */
-.top-title-text {
+.title-text {
     font-size: 48 !important;
     font-weight: bold;
     text-align: center;
@@ -186,6 +197,11 @@ body {
 .index-title-padding {
     padding-top: 275px;
     padding-left: 0px;
+}
+
+.button-custom {
+    
+    font-size: 14px;
 }
 
 .index-submit-button {
