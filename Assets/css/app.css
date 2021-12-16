@@ -47,7 +47,12 @@ body {
     border-radius: 15px; 
     margin-bottom: 10px; 
     font-size: 18px;
+
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
 }
+
 
 
 .button-custom-option {
@@ -76,7 +81,13 @@ body {
 .index-submit-button {
     font-size: 28px;
     width: 464px;
-    height: 84px;    
+    height: 84px;   
+    background-color:white; 
+    padding: 25px; 
+    color:black; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+    
 }
 
 .index-submit-button-padding {
@@ -157,9 +168,18 @@ body {
 @media screen and (max-width: 575px) {
 
     /* Styling for all page titles */
-.title-text {
-    font-size: 64;
+.padding-title-text {
+    padding-top: 275px;
+    font-size: 48 !important;
     font-weight: bold;
+    text-align: center;
+}
+
+/* Specific styling for title text on the options pages */
+.top-title-text {
+    font-size: 48 !important;
+    font-weight: bold;
+    text-align: center;
 }
 
 /*Styling for index page elements*/
@@ -173,6 +193,9 @@ body {
     width: 308px;
     height: 56px;  
     padding-top: 18px;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
 }
 .index-submit-button-padding {
     padding-top: 75px;
