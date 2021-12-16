@@ -73,9 +73,9 @@ var displayMovie = function (movieID) {
             console.log(err);
         });
 }
-
+ 
 //creates an event listener for when any element of class "option" is clicked.
-$(".option").on("click", function () {
+$(".options-card").on("click", function () {
     //stores user data using "this" selector
     let userGenre = $(this).val();
 

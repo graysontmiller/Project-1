@@ -11,10 +11,11 @@ var finalResults = function (movieID, recipeID) {
     fetch(movieString)
         .then(Response => Response.json()).then((data) => {
             let image = document.getElementById("movie-poster");
-            $("#movie-title").text(data.title);
+            $("#movie-title").text(data.title); 
             $("#movie-tagline").text(data.tagline);
             $("#movie-rating").text("Rating: " + data.vote_average);
             $("#movie-description").text(data.overview);
+            $("#genre").text("Genre: " + data.genres[0].name)
 
             console.log(data);
             image.setAttribute("src", "https://image.tmdb.org/t/p/original" + data.poster_path)
@@ -29,10 +30,12 @@ var finalResults = function (movieID, recipeID) {
         let dinnerPicture = document.getElementById("dinnerPicture");
         let ingredientList = document.getElementById("ingredient-list");
         let instructions = document.getElementById("instructions");
-
+        let servings = document.getElementById("servings");
+        
         dinnerTitle.innerText = data.title;
         dinnerPicture.setAttribute("src", data.image);
         instructions.innerHTML = data.instructions;
+        servings.innerText = "Servings: " + data.servings;
 
         for(let food in data.extendedIngredients){
             let li = document.createElement("li");

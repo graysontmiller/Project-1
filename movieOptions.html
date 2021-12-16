@@ -60,6 +60,12 @@
     <script src="./Assets/js/app.js"></script>
     <script>
       $(document).foundation();
+      $(document).ready(() => {
+        $("button").on("click", () => {
+            let userData = $(this).val();
+            searchGenre(userData);
+        });
+    });
     </script>
 
   </Main>

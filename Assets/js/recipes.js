@@ -76,7 +76,7 @@ var displayRecipe = function(recipeID){
 
 // On clicking submit button w/ the class of .option, sets session
 // storage to the cuisineID based on the value of the element clicked. 
-$(".option").on("click", function(){
+$(".options-card").on("click", function(){
     let myValue = $(this).val();
     sessionStorage.setItem("Cuisine", myValue);
 });
