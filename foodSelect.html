@@ -5,68 +5,68 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Selector</title>
+  <title>mynightho.me food choices</title>
   <link rel="stylesheet" href="./Assets/css/foundation.css" />
   <link rel="stylesheet" href="./Assets/css/app.css">
 </head>
 
 <body>
-  <div class="grid-container padding-4">
+  <div class="grid-container">
     <div class=" text-center ">
-      <h1>Do these sound good?</h1>
+      <h1 class="title-text">Do these sound good?</h1>
     </div>
-    <div class="grid-x grid-margin-x grid-margin-y">
+    <div class="grid-x grid-margin-x align-center">
 
-        <div class="cell small-6 medium-6 large-4">
-            <div class="card shadow" style="width: 300px;">
+        <div class="cell small-8 medium-6 large-4 ">
+            <div class="card shadow">
                 <img src="assets/imgs/placeholder.png" id="image0">
                 <div class="card-section">
-                  <h4>This is a card.</h4>
+                  <h4 id="foodTitle0"></h4>
                 </div>
             </div>
         </div> 
         
-        <div class="cell small-6 medium-6 large-4">
-            <div class="card shadow" style="width: 300px;">
+        <div class="cell small-8 medium-6 large-4">
+            <div class="card shadow">
                 <img src="assets/imgs/placeholder.png" id="image1">
                 <div class="card-section">
-                  <h4>This is a card.</h4>
+                  <h4 id="foodTitle1"></h4>
                 </div>
             </div>
         </div> 
         
-        <div class="cell small-6 medium-6 large-4">
-            <div class="card shadow" style="width: 300px;">
+        <div class="cell small-8 medium-6 large-4">
+            <div class="card shadow">
                 <img src="assets/imgs/placeholder.png" id="image2">
                 <div class="card-section">
-                  <h4>This is a card.</h4>
+                  <h4 id="foodTitle2"></h4>
                 </div>
             </div>
         </div> 
         
-            <div class="cell small-6 medium-6 large-4">
-                <div class="card shadow" style="width: 300px;">
+            <div class="cell small-8 medium-6 large-4">
+                <div class="card shadow">
                     <img src="assets/imgs/placeholder.png" id="image3">
                     <div class="card-section">
-                      <h4>This is a card.</h4>
+                      <h4 id="foodTitle3"></h4>
                     </div>
                 </div>
             </div> 
             
-            <div class="cell small-6 medium-6 large-4">
-                <div class="card shadow" style="width: 300px;">
+            <div class="cell small-8 medium-6 large-4">
+                <div class="card shadow">
                     <img src="assets/imgs/placeholder.png" id="image4">
                     <div class="card-section">
-                      <h4>This is a card.</h4>
+                      <h4 id="foodTitle4"></h4>
                     </div>
                 </div>
             </div> 
             
-            <div class="cell small-6 medium-6 large-4">
-                <div class="card shadow" style="width: 300px;">
+            <div class="cell small-8 medium-6 large-4">
+                <div class="card shadow">
                     <img src="assets/imgs/placeholder.png" id="image5">
                     <div class="card-section">
-                      <h4>This is a card.</h4>
+                      <h4 id="foodTitle5"></h4>
                     </div>
                 </div>
             </div> 
@@ -77,8 +77,8 @@
     </div>
 
     <div class="grid-x grid-margin-x align-center">
-      <a href="./foodResults.html">
-        <button class="submit alert button">Submit</button>
+      <a href="movieQuestion.html">
+        <button class="button button-custom shadow option">Submit</button>
       </a>
     </div>
 
@@ -88,13 +88,14 @@
     <script src="./assets/js/vendor/jquery.js"></script>
     <script src="./assets/js/vendor/what-input.js"></script>
     <script src="./assets/js/vendor/foundation.min.js"></script>
-
     <script src="./Assets/js/recipes.js"></script>
-    <script src="./Assets/js/app.js"></script>
-    <script src="./Assets/js/main-page.js"></script>
-    <script>
+    <script  src="./Assets/js/app.js"></script>
+    <script> 
       $(document).foundation();
+      
+      //retrieves item from session storage
       let cuisine = sessionStorage.getItem("Cuisine");
+      //calls searchRecipe function and passes through our Cuisine variable 
       searchRecipes(cuisine);
     </script>
 </body>

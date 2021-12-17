@@ -1,23 +1,258 @@
- /**{border: 1px solid red;}*/
+/* * { border: 1px solid red; }  */
 
-@media screen and (max-width: 39.9375em) {
-    .spacer-bar {
-        display: none;
-    }
+body {
+    background-color: #eee;
+}
+.full {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    background-size: cover;
 }
 
-@media screen and (min-width: 64em) {
-    body {
-        overflow: auto;
-    }
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
-/* footer {
-    margin-top: 0!important;
+.full .section-block {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* .section-block {
+    padding-top: 100px;
+    padding-bottom: 100px;
 } */
+
+
+/* Styling for all page titles */
+.title-text {
+    font-size: 64;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+
+.padding-title-text {
+    padding-top: 275px;
+    font-size: 64;
+    font-weight: bold;
+    text-align: center;
+} 
+
+/*Styling for index page elements*/
+.index-title-padding {
+    padding-top: 150px;
+    padding-left: 100px;
+
+}
+
+.index-submit-button {
+    font-size: 28px;
+    width: 464px;
+    height: 84px;   
+    background-color:white; 
+    padding: 25px; 
+    color:black; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+    
+}
+
+.index-submit-button-padding {
+    padding-top: 200px;
+}
+
+.index-title-text {
+    font-size: 96px;
+    font-weight: bold;
+}
+/* End of styling for index page elements */
+
+/* Accordion styling  */
+
+.accordion {
+    margin-left: 0;
+    background: #fefefe;
+    list-style-type: none;
+}
+
+.accordion-title {
+    background: white;
+    color: black;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+.accordion-content {
+    display: none;
+    padding: 1rem;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0;
+    border-left: 0;
+    background-color: #fefefe;
+    color: #0a0a0a;
+}
+
+.accordion-title:hover, .accordion-title:focus {
+    background-color: #ffffff;
+}
+
+a:hover, a:focus {
+    color: black;
+}
+
+/* Button styling */
 
 .shadow {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
 
+}
+
+.scaling-button {
+    height: 127px;
+    width: 127px;
+    font-size: 40px;
+}
+
+.button.option {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
+}
+
+.button-group .button {
+    margin-bottom: 10px;
+}
+
+.button-custom {
+    background-color:white; 
+    padding: 25px; 
+    color:black; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+    font-size: 18px;
+
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
+}
+
+
+
+.button-custom-option {
+    background-color:white;
+    color: #000;
+    border-radius: 15px;
+}
+
+.options-card {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+/* End button styling */
+
+.align-right {
+    float: right;
+    border-radius:10%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.margin {
+    margin-top: 10px;
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+
+/* Styling for all page titles */
+.title-text {
+    font-size: 64;
+    font-weight: bold;
+}
+
+/*Styling for index page elements*/
+.index-title-padding {
+    padding-top: 300px;
+    padding-left: 75px;
+}
+
+.index-submit-button {
+    font-size: 28px;
+    width: 464px;
+    height: 84px;    
+}
+
+.index-submit-button-padding {
+    padding-top: 125px;
+}
+
+.index-title-text {
+    font-size: 70px;
+    font-weight: bold;
+}
+/* End of styling for index page elements */
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+    /* Styling for all page titles */
+.padding-title-text {
+    padding-top: 275px;
+    font-size: 48 !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Specific styling for title text on the options pages */
+.title-text {
+    font-size: 48 !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Styling for index page elements*/
+.index-title-padding {
+    padding-top: 275px;
+    padding-left: 0px;
+}
+
+.button-custom {
+    
+    font-size: 14px;
+}
+
+.index-submit-button {
+    font-size: 20px;
+    width: 308px;
+    height: 56px;  
+    padding-top: 18px;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 10em;
+}
+.index-submit-button-padding {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.index-title-text {
+    font-size: 46px;
+    font-weight: bold;
+    text-align: center;
+}
+/* End of styling for index page elements */
 }

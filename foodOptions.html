@@ -4,66 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Options</title>
+    <title>mynightho.me food options</title>
     <link rel="stylesheet" href="./Assets/css/foundation.css" /></head>
+    <link rel="stylesheet" href="./Assets/css/app.css" />
+</head>
+
 <body>
   
-    <Main class="grid-container padding-4">
-    <!-- Question  -->
-        <div class=" ">
-            <div class="row align-center">
-                <div class="large-offset-2">
-                    <div class="text-left">
-                        <h2> What kind of food would you like to eat tonight?</h3>
-                    </div>
+    <Main>
+        <section class="grid-x section-block">
+            <div class="grid-container"> 
+                <!-- Question  -->
+                <div class="grid-x align-center ">
+                    <h2 class="title-text"> What kind of food would you like to eat tonight?</h2>
                 </div>
                 <!-- Choices Grid  -->
-                <div class="grid-x grid-margin-x grid-margin-y large-offset-2">
+                <div class="grid-x grid-padding-x grid-padding-y align-center ">
                     <div class="cell small-12 medium-6 large-4" >
-                        <button class="button option cell" value="american"> American </button> 
+                        <button class="button button-custom shadow options-card" value="american"> American </button>   
                     </div>
 
                     <div class="cell small-12 medium-6 large-4" >
-                        <button class="button option cell"value="mexican"> Mexican </button>
+                        <button class="button button-custom shadow options-card"value="mexican"> Mexican </button>
                     </div>
                 
                     <div class="cell small-12 medium-6 large-4" >
-                        <button class="button option cell"value="asian"> Asian </button>
+                        <button class="button button-custom shadow options-card"value="asian"> Asian </button>
                     </div>
 
                     <div class="cell small-12 medium-6 large-4">
-                        <button class="button option cell" value="italian"> Italian </button>
+                        <button class="button button-custom shadow options-card" value="italian"> Italian </button>
                     </div>
 
                     <div class="cell small-12 medium-6 large-4">
-                        <button class="button option cell" value="mediterranean"> Mediterranean </button>
+                        <button class="button button-custom shadow options-card" value="mediterranean"> Mediterranean </button>
                     </div>
 
                     <div class="cell small-12 medium-6 large-4">
-                        <button class="button option cell" value="european"> European </button>
+                        <button class="button button-custom shadow options-card" value="european"> European </button>
                     </div>
                 </div>
+                <!-- Submit Button  -->
+                <div class="grid-x grid-padding-x align-center">
+                    <a href="foodSelect.html">
+                        <input type="submit" class="button button-custom options-page-button shadow "/>
+                    </a>
+                </div>
             </div>
-        </div>
-    <!-- Submit Button  -->
-    <div class="grid-x grid-margin-x align-center">
-      <a href="./foodSelect.html">
-        <button class="submit alert button">Submit</button>
-      </a>
-    </div>
+        </section>
   </Main>
-  <footer class="grid-x">
-    <div class="cell spacer-bar" style="height: 10vh; background: black;"></div>
-  </footer>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/js/vendor/jquery.js"></script>
   <script src="./assets/js/vendor/what-input.js"></script>
   <script src="./assets/js/vendor/foundation.min.js"></script>
   <script src="./Assets/js/recipes.js"></script>
   <script src="./Assets/js/app.js"></script>
-  <script src="./Assets/js/main-page.js"></script>
-  
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 
 </html>

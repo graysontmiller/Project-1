@@ -1,40 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation Starter Template</title>
+    <title>mynightho.me final results</title>
     <link rel="stylesheet" href="./Assets/css/foundation.css" />
     <link rel="stylesheet" href="./Assets/css/app.css" />
 </head>
+
 <body>
-    <div class="grid-container">
-        <div>
-            <h1>Evening Plans</h1>
-        </div>
-        <div class="grid-x large-4-offset">
-            <div>
-                <h2>Dinner</h2>
-                <ul></ul>
-            </div>
-            <div> 
-                <h2>Movie</h2>
-                <ul></ul>
-            </div>
-        </div>
+    <div class="text-center ">
+        <h1 class="title-text">Here's to a perfect night in</h1>
     </div>
+    <!-- results  -->
+    <main class="grid-x align-center">
+        <!-- Dinner Section  -->
+        <section class="cell small-10 large-6 ">
+            <div class="grid-container fluid">
+                <!-- Dinner Image and Text cards  -->
+                <div class="grid-x grid-margin-x align-center">
+                    <div class="cell small-11 large-6">
+                        <div class="grid-x">
+                            <div class="card shadow">
+                             <img src="" id="dinnerPicture">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell small-11 large-6 flex-container">
+                        <div class="callout flex-child-auto shadow">
+                            <h2 id="dinnerTitle"></h2>
+                            <p id="servings"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion with Ingredients and Instructions  -->
+                <div class="grid-x grid-margin-y align-center">
+                    <div class="cell small-11 large-12">
+                        <ul class="accordion shadow" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title ">Ingredients</a>
+                                <ul class="accordion-content" id="ingredient-list" data-tab-content>
+                                </ul>
+                            </li>
+                            <li class="accordion-item shadow" data-accordion-item>
+                                <a href="#" class="accordion-title">Instructions</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <div id="instructions"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Movie section  -->
+        <section class="cell small-10 large-6">
+            <div class="grid-container">
+                <!-- Poster and Synopsis cards  -->
+                <div class="grid-x grid-margin-x align-center">
+                    <!-- Poster -->
+                    <div class="cell small-11 large-6">
+                        <div class="card shadow">
+                            <img src="" id="movie-poster" alt="poster" >
+                        </div>
+                    </div>
+                    <!-- Synopsis  -->
+                    <div class="cell small-11 small-order-2 large-6 large-order-1 flex-container">
+                         <div class="callout large flex-child-auto shadow">
+                            <h2>Movie Synopsis: </h2>
+                            <p id="movie-description"></p> 
+                        </div>
+                    </div>
+                    <div class="cell small-11 small-order-1 large-12 large-order-2">
+                        <div class="callout large shadow">
+                            <h2 id="movie-title"></h2>
+                            <p id="genre"></p>
+                            <p id="movie-tagline"></p>
+                            <div class="grid-x">
+                                <h3 id="movie-rating"></h3>
+                                <img src="./Assets/imgs/star.svg"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/vendor/jquery.js"></script>
+    <script src="./assets/js/vendor/what-input.js"></script>
+    <script src="./assets/js/vendor/foundation.min.js"></script>
+    <script src="./Assets/js/app.js"></script>
+    <script>
+      $(document).foundation();
+
+      $(document).ready(() => {
+          let movieID = sessionStorage.getItem("MovieID");
+          let recipeID = sessionStorage.getItem("recipeID");
+
+          finalResults(movieID, recipeID);
+      });
+    </script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./assets/js/vendor/jquery.js"></script>
-<script src="./assets/js/vendor/what-input.js"></script>
-<script src="./assets/js/vendor/foundation.min.js"></script>
-<script src="./Assets/js/movie.js"></script>
-<script src="./Assets/js/recipes.js"></script>
-<script src="./Assets/js/app.js"></script>
-<script src="./Assets/js/main-page.js"></script>
-<script>
-  $(document).foundation();
-</script>
-</body>
+
+</html>
