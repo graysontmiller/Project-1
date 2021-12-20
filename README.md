@@ -1,5 +1,6 @@
 # Project-1
 
+A web application developed with JavaScript, JQuery, HTML, and the Foundation CSS framework. Utilizing the [Spoonacular API.](https://spoonacular.com/food-api) and the [themoviedb API.](https://developers.themoviedb.org/3/getting-started/introduction)
 # User Story:
 AS a busy person
 
